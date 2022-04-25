@@ -1,0 +1,233 @@
+{
+  "version": "17.0.0",
+  "artifacts": {
+    "assembly-BinAlerterPipeline-BinAlerterApp": {
+      "type": "cdk:cloud-assembly",
+      "properties": {
+        "directoryName": "assembly-BinAlerterPipeline-BinAlerterApp",
+        "displayName": "BinAlerterPipeline/BinAlerterApp"
+      }
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "BinAlerterPipeline.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "BinAlerterPipeline.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "BinAlerterPipeline": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://811799881965/eu-west-1",
+      "properties": {
+        "templateFile": "BinAlerterPipeline.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::811799881965:role/cdk-hnb659fds-deploy-role-811799881965-eu-west-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::811799881965:role/cdk-hnb659fds-cfn-exec-role-811799881965-eu-west-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-811799881965-eu-west-1/83f548eceb4bbce2de91bf55897e69d7788ae86497d06e74c226fdd627e8b2ed.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "BinAlerterPipeline.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::811799881965:role/cdk-hnb659fds-lookup-role-811799881965-eu-west-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "BinAlerterPipeline.assets"
+      ],
+      "metadata": {
+        "/BinAlerterPipeline/ECRRepo/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ECRRepoC36DC9E6"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketAEA9A052"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/ArtifactsBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketPolicyF53CCC52"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleB27FAA37"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleDefaultPolicy7BDC1ABB"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Pipeline9850B417"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/Source/stuartgraham_BinAlerter/WebhookResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineSourcestuartgrahamBinAlerterWebhookResourceD0A97EBB"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProjectRole231EEA2A"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProjectRoleDefaultPolicyFB6C941C"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProject6BEFA8E6"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/Build/Synth/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCodePipelineActionRole4E7A6C97"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/Build/Synth/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCodePipelineActionRoleDefaultPolicy92C90290"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/UpdatePipeline/SelfMutate/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutateCodePipelineActionRoleD6D4E5CF"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/UpdatePipeline/SelfMutate/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutateCodePipelineActionRoleDefaultPolicyE626265B"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/Assets/FileAsset1/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset1CodePipelineActionRoleC0EC649A"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/Assets/FileAsset1/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset1CodePipelineActionRoleDefaultPolicy5F0BE7E8"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/BinAlerterApp/ContainerBuild/ContainerBuild/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBinAlerterAppContainerBuild6F4D2BC7"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/BinAlerterApp/ContainerBuild/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBinAlerterAppContainerBuildCodePipelineActionRole7192F26B"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Pipeline/BinAlerterApp/ContainerBuild/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBinAlerterAppContainerBuildCodePipelineActionRoleDefaultPolicyA88404B2"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/UpdatePipeline/SelfMutation/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationRole57E559E8"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/UpdatePipeline/SelfMutation/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationRoleDefaultPolicyA225DA4E"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/UpdatePipeline/SelfMutation/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationDAA41400"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Assets/FileRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileRole59943A77"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Assets/FileRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileRoleDefaultPolicy14DB8755"
+          }
+        ],
+        "/BinAlerterPipeline/Pipeline/Assets/FileAsset1/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset185A67CB4"
+          }
+        ],
+        "/BinAlerterPipeline/CodeBuildRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CodeBuildRole728CBADE"
+          }
+        ],
+        "/BinAlerterPipeline/CodeBuildRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CodeBuildRoleDefaultPolicy829527DE"
+          }
+        ],
+        "/BinAlerterPipeline/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/BinAlerterPipeline/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/BinAlerterPipeline/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "BinAlerterPipeline"
+    }
+  }
+}

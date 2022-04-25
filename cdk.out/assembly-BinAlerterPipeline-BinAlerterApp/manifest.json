@@ -1,0 +1,107 @@
+{
+  "version": "17.0.0",
+  "artifacts": {
+    "BinAlerterPipelineBinAlerterAppBinAlerter460FB4A8.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "BinAlerterPipelineBinAlerterAppBinAlerter460FB4A8.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "BinAlerterPipelineBinAlerterAppBinAlerter460FB4A8": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "BinAlerterPipelineBinAlerterAppBinAlerter460FB4A8.template.json",
+        "validateOnSynth": true,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/59d8f725b2d313c5b1766228d4716a5c355f07810a782cf31237ad72c816ff18.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "BinAlerterPipelineBinAlerterAppBinAlerter460FB4A8.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "BinAlerterApp-BinAlerter"
+      },
+      "dependencies": [
+        "BinAlerterPipelineBinAlerterAppBinAlerter460FB4A8.assets"
+      ],
+      "metadata": {
+        "/BinAlerterPipeline/BinAlerterApp/BinAlerter/LatestImage.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LatestImageParameter"
+          }
+        ],
+        "/BinAlerterPipeline/BinAlerterApp/BinAlerter/BinAlerter-WorcesterBot/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BinAlerterWorcesterBotServiceRoleFEAAA1AC"
+          }
+        ],
+        "/BinAlerterPipeline/BinAlerterApp/BinAlerter/BinAlerter-WorcesterBot/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BinAlerterWorcesterBot42761586"
+          }
+        ],
+        "/BinAlerterPipeline/BinAlerterApp/BinAlerter/BinAlerter-WorcesterBot/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BinAlerterWorcesterBotLogRetention6F4AE7E7"
+          }
+        ],
+        "/BinAlerterPipeline/BinAlerterApp/BinAlerter/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+          }
+        ],
+        "/BinAlerterPipeline/BinAlerterApp/BinAlerter/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB"
+          }
+        ],
+        "/BinAlerterPipeline/BinAlerterApp/BinAlerter/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A"
+          }
+        ],
+        "/BinAlerterPipeline/BinAlerterApp/BinAlerter/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/BinAlerterPipeline/BinAlerterApp/BinAlerter/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/BinAlerterPipeline/BinAlerterApp/BinAlerter/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/BinAlerterPipeline/BinAlerterApp/BinAlerter/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "BinAlerterPipeline/BinAlerterApp/BinAlerter"
+    }
+  }
+}

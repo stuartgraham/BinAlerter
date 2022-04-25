@@ -1,0 +1,20 @@
+{
+  "version": "17.0.0",
+  "files": {
+    "83f548eceb4bbce2de91bf55897e69d7788ae86497d06e74c226fdd627e8b2ed": {
+      "source": {
+        "path": "BinAlerterPipeline.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "811799881965-eu-west-1": {
+          "bucketName": "cdk-hnb659fds-assets-811799881965-eu-west-1",
+          "objectKey": "83f548eceb4bbce2de91bf55897e69d7788ae86497d06e74c226fdd627e8b2ed.json",
+          "region": "eu-west-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::811799881965:role/cdk-hnb659fds-file-publishing-role-811799881965-eu-west-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
