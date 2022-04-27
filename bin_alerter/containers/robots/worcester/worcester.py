@@ -123,7 +123,7 @@ def check_alert_collection(collection):
     time_difference_hours = time_difference.total_seconds()/(60*60)
     print(str(time_difference_hours))
     
-    if int(time_difference_hours) < TIME_THRESHOLD:
+    if int(time_difference_hours) < TIME_THRESHOLD and int(time_difference_hours) > 0:
         bin_colour = collection[2]
         bin_date =  collection[1].strftime('%d/%m/%Y')
         message = message_builder(bin_colour, bin_date)
